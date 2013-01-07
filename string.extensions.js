@@ -43,12 +43,12 @@ String.prototype.insert = function (position, character) {
   return t.substring(0, position) + character + t.substring(position);
 };
 
-String.prototype.startsWith = function (character) {
-  return this.match('^' + character) === character;
+String.prototype.startsWith = function (text) {
+  return this.match('^' + text) == text;
 };
 
 String.prototype.endsWith = function (character) {
-  return this.match(character + '$') === character;
+  return this.match(character + '$') == character;
 };
 
 String.prototype.isNullOrEmpty = function () {
@@ -91,7 +91,7 @@ String.prototype.prependTo = function (text, count) {
 
 // More info: https://github.com/karalamalar/valiDate
 String.prototype.valiDate = function () {
-  if (/^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)[0-9]{2}$/.test(this)) {
+  if (/^(0?[1-9]|[12][0-9]|3[01])[- /.](0?[1-9]|1[012])[- /.](19|20)[0-9]{2}$/.test(this)) {
     var v = this.replace(/[- /]/g, '.').split('.'),
       d = parseInt(v[0], 10),
       m = parseInt(v[1], 10),
