@@ -6,49 +6,49 @@
  * Licensed under Creative Commons Attribution-Share Alike 3.0 Unported License
  * http://creativecommons.org/licenses/by-sa/3.0/
  */
-String.prototype.trimLeft = function (c) {
-  c = c || ' ';
-  return this.replace(new RegExp('^[' + c + ']+'), "");
+String.prototype.trimLeft = function (character) {
+  character = character || ' ';
+  return this.replace(new RegExp('^[' + character + ']+'), "");
 };
 
-String.prototype.trimRight = function (c) {
-  c = c || ' ';
-  return this.replace(new RegExp('[' + c + ']+$'), "");
+String.prototype.trimRight = function (character) {
+  character = character || ' ';
+  return this.replace(new RegExp('[' + character + ']+$'), "");
 };
 
-String.prototype.trim = function (c) {
-  return this.trimLeft(c).trimRight(c);
+String.prototype.trim = function (character) {
+  return this.trimLeft(character).trimRight(character);
 };
 
-String.prototype.padLeft = function (l, c) {
-  var s = this.toString();
-  c = c || ' ';
-  while (s.length < l) {
-    s = c + s;
+String.prototype.padLeft = function (length, character) {
+  var t = this.toString();
+  character = character || ' ';
+  while (t.length < length) {
+    t = character + t;
   }
-  return s;
+  return t;
 };
 
-String.prototype.padRight = function (l, c) {
-  var s = this.toString();
-  c = c || ' ';
-  while (s.length < l) {
-    s = s + c;
+String.prototype.padRight = function (length, character) {
+  var t = this.toString();
+  character = character || ' ';
+  while (t.length < length) {
+    t = t + character;
   }
-  return s;
+  return t;
 };
 
-String.prototype.insert = function (p, c) {
-  var s = this.toString();
-  return s.substring(0, p) + c + s.substring(p);
+String.prototype.insert = function (position, character) {
+  var t = this.toString();
+  return t.substring(0, position) + character + t.substring(position);
 };
 
-String.prototype.startsWith = function (s) {
-  return this.match('^' + s) === s;
+String.prototype.startsWith = function (character) {
+  return this.match('^' + character) === character;
 };
 
-String.prototype.endsWith = function (s) {
-  return this.match(s + '$') === s;
+String.prototype.endsWith = function (character) {
+  return this.match(character + '$') === character;
 };
 
 String.prototype.isNullOrEmpty = function () {
@@ -59,34 +59,34 @@ String.prototype.isNullOrWhitespace = function () {
   return this === null || this.replace(/\s/g, '').length === 0;
 };
 
-String.prototype.append = function (s, c) {
+String.prototype.append = function (text, count) {
   var t = this.toString();
-  c = c || 1;
-  while (0 < c) {
-    t = t + s;
-    c--;
+  count = count || 1;
+  while (0 < count) {
+    t = t + text;
+    count--;
   }
   return t;
 };
 
-String.prototype.appendTo = function (s, c) {
+String.prototype.appendTo = function (text, count) {
   var t = this.toString();
-  return s.append(t, c);
+  return text.append(t, count);
 };
 
-String.prototype.prepend = function (s, c) {
+String.prototype.prepend = function (text, count) {
   var t = this.toString();
-  c = c || 1;
-  while (0 < c) {
-    t = s + t;
-    c--;
+  count = count || 1;
+  while (0 < count) {
+    t = text + t;
+    count--;
   }
   return t;
 };
 
-String.prototype.prependTo = function (s, c) {
+String.prototype.prependTo = function (text, count) {
   var t = this.toString();
-  return s.prepend(t, c);
+  return text.prepend(t, count);
 };
 
 // More info: https://github.com/karalamalar/valiDate
