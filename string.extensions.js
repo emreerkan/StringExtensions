@@ -44,11 +44,11 @@ String.prototype.insert = function (position, character) {
 };
 
 String.prototype.startsWith = function (text) {
-  return this.match('^' + text) == text;
+  return this.substring(0, text.length) === text;
 };
 
-String.prototype.endsWith = function (character) {
-  return this.match(character + '$') == character;
+String.prototype.endsWith = function (text) {
+  return this.substring(this.length - text.length) === text;
 };
 
 String.prototype.isNullOrEmpty = function () {

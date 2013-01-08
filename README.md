@@ -9,7 +9,7 @@ The list of extensions:
     console.log( textToBeTrimmed.trimLeft() ); // outputs: "No space please!"
 
     textToBeTrimmed = "zzzzzzzzzzWake up!";
-    console.log( textToBeTrimmed.trimLeft("z"); // outputs: "Wake up!"
+    console.log( textToBeTrimmed.trimLeft("z") ); // outputs: "Wake up!"
 
 ## trimRight
 
@@ -17,7 +17,7 @@ The list of extensions:
     console.log( textToBeTrimmed.trimRight() ); // outputs: "No space please!"
 
     textToBeTrimmed = "Sleeping Beautyzzzzzzzzzz";
-    console.log( textToBeTrimmed.trimRight("z"); // outputs: "Sleeping Beauty"
+    console.log( textToBeTrimmed.trimRight("z") ); // outputs: "Sleeping Beauty"
 
 ## trim
 
@@ -25,23 +25,23 @@ The list of extensions:
     console.log( textToBeTrimmed.trim() ); // outputs: "Space, space everywhere!"
 
     textToBeTrimmed = "zzzzzzzzzzDo not disturb...zzzzzzzzzzz";
-    console.log( textToBeTrimmed.trim("z"); // outputs: "Do not disturb..."
+    console.log( textToBeTrimmed.trim("z") ); // outputs: "Do not disturb..."
 
 ## padLeft
 
     var textToBePadded = "Pad me, right?!?";
-    console.log( textToBeTrimmed.padLeft(20) ); // outputs: "    Pad me, right?!?"
+    console.log( textToBePadded.padLeft(20) ); // outputs: "    Pad me, right?!?"
 
     textToBePadded = "Fill in the blanks";
-    console.log( textToBeTrimmed.padLeft(20, "_"); // outputs: "___Fill in the blanks"
+    console.log( textToBePadded.padLeft(20, "_") ); // outputs: "__Fill in the blanks"
 
 ## padRight
 
     var textToBePadded = "No space left";
-    console.log( textToBeTrimmed.padRight(20) ); // outputs: "No space left       "
+    console.log( textToBePadded.padRight(20) ); // outputs: "No space left       "
 
     textToBePadded = "Fill in the blanks";
-    console.log( textToBeTrimmed.padRight(20, "_"); // outputs: "Fill in the blanks___"
+    console.log( textToBePadded.padRight(20, "_") ); // outputs: "Fill in the blanks__"
 
 ## insert
 
@@ -58,9 +58,9 @@ The list of extensions:
 ## endsWith
 
     var scaryQuestion = "Does this look infected?";
-    console.log( scaryQuestion .endsWith("?") );        // outputs: true
-    console.log( scaryQuestion .endsWith("ed?") );      // outputs: true
-    console.log( scaryQuestion .endsWith("infected") ); // outputs: false
+    console.log( scaryQuestion.endsWith("?") );        // outputs: true
+    console.log( scaryQuestion.endsWith("ed?") );      // outputs: true
+    console.log( scaryQuestion.endsWith("infected") ); // outputs: false
 
 ## isNullOrEmpty
 
