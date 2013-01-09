@@ -99,7 +99,7 @@ The list of extensions:
     var reverseYodaStyle = "Do, or do not. There is no try. ";
     console.log( reverseYodaStyle.prependTo("No! Try not.") );   // outputs: "Do, or do not. There is no try. No! Try not."
 
-## valiDate
+## valiDate[*](https://github.com/karalamalar/valiDate)
 
     var myDate = "8.1.2013";
     if(myDate = myDate.valiDate()) {
@@ -108,6 +108,6 @@ The list of extensions:
     myDate = "13.13.2013";
     console.log( myDate.valiDate() ); // outputs: false
 
-Copyright (c) 2009-2013 İzzet Emre Erkan
-Licensed under Creative Commons Attribution-Share Alike 3.0 Unported License
+Copyright (c) 2009-2013 İzzet Emre Erkan  
+Licensed under Creative Commons Attribution-Share Alike 3.0 Unported License  
 http://creativecommons.org/licenses/by-sa/3.0/
