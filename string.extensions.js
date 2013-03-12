@@ -128,7 +128,7 @@ String.prototype.capitalize = function(type, splitChar) {
       return capitalizeText(this);
       break;
   }
-}
+};
 
 // More info: https://github.com/karalamalar/valiDate
 String.prototype.valiDate = function () {
