@@ -99,6 +99,26 @@ The list of extensions:
     var reverseYodaStyle = "Do, or do not. There is no try. ";
     console.log( reverseYodaStyle.prependTo("No! Try not.") );   // outputs: "Do, or do not. There is no try. No! Try not."
 
+## capitalize
+
+    var capitalizeMe = "hello";
+    console.log( capitalizeMe.capitalize() );             // outputs: "Hello"
+    console.log( capitalizeMe.capitalize("w") );          // outputs: "Hello"
+    console.log( capitalizeMe.capitalize("word") );       // outputs: "Hello"
+    
+    capitalizeMe = "hello world!";
+    console.log( capitalizeMe.capitalize() );             // outputs: "Hello world!"
+    console.log( capitalizeMe.capitalize("e") );          // outputs: "Hello World!"
+    console.log( capitalizeMe.capitalize("every-word") ); // outputs: "Hello World!"
+    
+    capitalizeMe = "no! try not. do, or do not. there is no try.";
+    console.log( capitalizeMe.capitalize("p") );          // outputs: "No! Try not. Do, or do not. There is no try."
+    console.log( capitalizeMe.capitalize("paragraph") );  // outputs: "No! Try not. Do, or do not. There is no try."
+    console.log( capitalizeMe.capitalize("e") );          // outputs: "No! Try Not. Do, Or Do Not. There Is No Try."
+    console.log( capitalizeMe.capitalize("s", ".") );     // outputs: "No! try not. Do, or do not. There is no try."
+    console.log( capitalizeMe.capitalize("split", ".") ); // outputs: "No! try not. Do, or do not. There is no try."
+    console.log( capitalizeMe.capitalize("s", ",!") );    // outputs: "No! Try not. do, Or do not. there is no try."
+
 ## valiDate[*](https://github.com/karalamalar/valiDate)
 
     var myDate = "8.1.2013";

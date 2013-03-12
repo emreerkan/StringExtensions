@@ -89,6 +89,47 @@ String.prototype.prependTo = function (text, count) {
   return text.prepend(t, count);
 };
 
+String.prototype.capitalize = function(type, splitChar) {
+  var t, i, il, y, yl;
+  type = type ? type.toLowerCase() : 'word';
+  splitChar = splitChar || ' ';
+  function capitalizeText(text) {
+    var trimmed = text.trimLeft();
+    return (trimmed.charAt(0).toUpperCase() + trimmed.substring(1)).padLeft(text.length);
+  }
+  function splitAndCapitalize(text, splitChar) {
+    for(i=0,il=splitChar.length; i < il; i++) {
+      t = text.split(splitChar.charAt(i));
+      for(y = 0, yl = t.length; y < yl; y++) {
+        t[y] = capitalizeText(t[y]);
+      }
+      text = t.join(splitChar.charAt(i));
+    }
+    return text;
+  }
+  switch(type) {
+    case 'split':
+    case 's':
+      return splitAndCapitalize(this, splitChar);
+      break;
+    case 'paragraph':
+    case 'p':
+      return splitAndCapitalize(this, '.!?;');
+      break;
+    case 'every':
+    case 'everyword':
+    case 'every-word':
+    case 'e':
+      return splitAndCapitalize(this, ' ');
+      break;
+    case 'word':
+    case 'w':
+    default:
+      return capitalizeText(this);
+      break;
+  }
+}
+
 // More info: https://github.com/karalamalar/valiDate
 String.prototype.valiDate = function () {
   if (/^(0?[1-9]|[12][0-9]|3[01])[- /.](0?[1-9]|1[012])[- /.](19|20)[0-9]{2}$/.test(this)) {
