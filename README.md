@@ -115,9 +115,31 @@ The list of extensions:
     console.log( capitalizeMe.capitalize("p") );          // outputs: "No! Try not. Do, or do not. There is no try."
     console.log( capitalizeMe.capitalize("paragraph") );  // outputs: "No! Try not. Do, or do not. There is no try."
     console.log( capitalizeMe.capitalize("e") );          // outputs: "No! Try Not. Do, Or Do Not. There Is No Try."
+    
     console.log( capitalizeMe.capitalize("s", ".") );     // outputs: "No! try not. Do, or do not. There is no try."
     console.log( capitalizeMe.capitalize("split", ".") ); // outputs: "No! try not. Do, or do not. There is no try."
     console.log( capitalizeMe.capitalize("s", ",!") );    // outputs: "No! Try not. do, Or do not. there is no try."
+
+## count
+
+    var text = "no! try not. do, or do not. there is no try.";
+    console.log( text.count() );      // outputs: 11 (word count)
+    console.log( text.count("o") );   // outputs: 7  (character count)
+    console.log( text.count("do") );  // outputs: 2  (string count)
+    
+## isEmail
+
+    var temp = "this.is@an.email.com";
+    console.log( temp.isEmail() );    // outputs: true
+    temp = "this,however@is.not.an.email.com";
+    console.log( temp.isEmail() );    // outputs: false
+    
+## isURL
+
+    var temp = "https://github.com/karalamalar/StringExtensions";
+    console.log( temp.isURL() );      // outputs: true
+    temp = "github.com/karalamalar/StringExtensions";
+    console.log( temp.isURL() );      // outputs: false
 
 ## valiDate[*](https://github.com/karalamalar/valiDate)
 

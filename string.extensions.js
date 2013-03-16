@@ -130,6 +130,19 @@ String.prototype.capitalize = function(type, splitChar) {
   }
 };
 
+String.prototype.count = function(text) {
+  return text ? this.split(text).length - 1 : this.trim().split(/\s+/g).length;
+};
+
+String.prototype.isEmail = function() {
+  return /^(?:[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9\-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9\-]*[a-z0-9])?)$/i.test(this);
+};
+
+String.prototype.isURL = function() {
+  return /^(?:\b(https?|ftp|file):\/\/[\-A-Z0-9+&@#\/%?=~_|!:,.;]*[\-A-Z0-9+&@#\/%=~_|])$/i.test(this);
+};
+
+
 // More info: https://github.com/karalamalar/valiDate
 String.prototype.valiDate = function () {
   if (/^(0?[1-9]|[12][0-9]|3[01])[- /.](0?[1-9]|1[012])[- /.](19|20)[0-9]{2}$/.test(this)) {
