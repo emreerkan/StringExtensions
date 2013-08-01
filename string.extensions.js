@@ -142,6 +142,17 @@ String.prototype.isURL = function() {
   return /^(?:\b(https?|ftp|file):\/\/[\-A-Z0-9+&@#\/%?=~_|!:,.;]*[\-A-Z0-9+&@#\/%=~_|])$/i.test(this);
 };
 
+Number.prototype.toTime = function(compact) {
+  var hour = Math.floor(this / 3600),
+    minute = Math.floor((this - hour * 3600) / 60),
+    second = this - (hour * 3600 + minute * 60),
+    returnValue = [hour < 10 ? 0 : '', hour, ':', minute < 10 ? 0 : '', minute, ':', second < 10 ? 0 : '', second].join('');
+  return compact ? returnValue.trimLeft('0').trimLeft(':').trimLeft('0').trimLeft(':').trimLeft('0') : returnValue;
+}
+
+String.prototype.toTime = function(compact) {
+    return parseInt(this, 10).toTime(compact);
+};
 
 // More info: https://github.com/karalamalar/valiDate
 String.prototype.valiDate = function () {

@@ -141,6 +141,18 @@ The list of extensions:
     temp = "github.com/karalamalar/StringExtensions";
     console.log( temp.isURL() );      // outputs: false
 
+## toTime (integer)
+
+    var temp = 134;
+    console.log( temp.toTime() );     // outputs: 00:02:14
+    console.log( temp.toTime(true) ); // outputs:     2:14 (compact mode)
+
+## toTime (string)
+
+    var temp = "4543";
+    console.log( temp.toTime() );     // outputs: 01:15:43
+    console.log( temp.toTime(true) ); // outputs:  1:15:43 (compact mode)
+
 ## valiDate[*](https://github.com/karalamalar/valiDate)
 
     var myDate = "8.1.2013";
