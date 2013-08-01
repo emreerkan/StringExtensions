@@ -1,6 +1,9 @@
-/*
+/**
  * StringExtensions
- * http://www.karalamalar.net/
+ * https://github.com/karalamalar/StringExtensions
+ *
+ * @author: twitter.com/IzzetEmreErkan
+ * @author_uri: http://www.karalamalar.net
  *
  * Copyright (c) 2009-2013 İzzet Emre Erkan
  * Licensed under Creative Commons Attribution-Share Alike 3.0 Unported License
