@@ -3,6 +3,28 @@ A set of string extensions to extend string capabilities of JavaScript.
 
 The list of extensions:
 
+* [trimLeft](#trimleft)
+* [trimRight](#trimright)
+* [trim](#trim)
+* [padLeft](#padleft)
+* [padRight](#padright)
+* [insert](#insert)
+* [startsWith](#startswith)
+* [endsWith](#endswith)
+* [isNullOrEmpty](#isnullorempty)
+* [isNullOrWhitespace](#isnullorwhitespace)
+* [append](#append)
+* [appendTo](#appendto)
+* [prepend](#prepend)
+* [prependTo](#prependto)
+* [capitalize](#capitalize)
+* [count](#count)
+* [isEmail](#isemail)
+* [isURL](#isurl)
+* [toTime (integer)](#totime-integer)
+* [toTime (string)](#totime-string)
+* [valiDate](#validate)
+
 ## trimLeft
 
     var textToBeTrimmed = "     No space please!";
